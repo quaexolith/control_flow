@@ -20,6 +20,12 @@ fn main() {
     loop_break_with_counter();
 
     loop_with_label();
+
+    loop_while();
+
+    loop_through_array_with_for();
+
+    loop_through_range_with_for();
 }
 
 fn check_divisibility(number: i32) {
@@ -75,4 +81,38 @@ fn loop_with_label() {
         count += 1;
     }
     println!("End count = {count}");
+}
+
+fn loop_while() {
+    println!("Loop while");
+
+    let mut number = 3;
+
+    while number != 0 {
+        println!("{number}");
+
+        number -= 1;
+    }
+
+    println!("LIFTOFF!!!")
+}
+
+fn loop_through_array_with_for() {
+    println!("Loop through array with for");
+
+    let a = [10, 20, 30, 40, 50];
+
+    for element in a {
+        println!("{element}");
+    }
+}
+
+fn loop_through_range_with_for() {
+    println!("Loop through range with for");
+
+    for number in (1..4).rev() {
+        println!("{number}");
+    }
+
+    println!("LIFTOFF!!!");
 }
